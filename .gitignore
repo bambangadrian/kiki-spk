@@ -1,0 +1,60 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Vendor, node_modules, bower_components and Composer data #
+############################################################
+/vendor/
+**/node_modules/**
+**/bower_components/**
+**/semantic/**
+composer.lock
+
+# IDE Files #
+#############
+/.idea
+
+# Application User Data Direcotory #
+###################################
+**/Data/Caches/**
+**/Data/Sessions/**
+**/Data/Temp/**
+**/Data/Uploads/**
+
+
+# All environment files #
+#########################
+.local
+.beta
+.staging
+.live
+
+# Logs Directory #
+##################
+**/Data/Logs/**
