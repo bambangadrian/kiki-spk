@@ -10,6 +10,5 @@
  * @version   GIT: $Id$
  * @link      -
  */
-require_once __DIR__ .'/vendor/autoload.php';
 
-\SimpleFw\Apps\Spk\Spk::run();
+require_once __DIR__ . '/../System/Bootstrap.php';
