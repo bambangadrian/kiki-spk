@@ -1,0 +1,85 @@
+*{
+    font-family : Tahoma, Helvetica, Arial;
+}
+
+html{
+    font-size: 12px;
+}
+
+body{
+    margin: auto;
+}
+
+div.container{
+    padding: 5px;
+}
+
+.fieldset{
+    margin-bottom: 15px;
+}
+
+form{
+    line-height :0.9em;
+    padding: 15px;
+}
+
+div.form.field{
+    margin: 5px 2px;
+    vertical-align : top;
+}
+
+div.form label{
+    display : inline-block;
+    width: 100px;
+}
+
+.fieldset.login{
+    display : block;
+    width: 350px;
+    margin: 20% auto;
+
+}
+
+div.nav{
+    display: block;
+    text-align: left;
+    background-color: #eee;
+    width: 100%;
+}
+
+div.nav.top{
+    top: 10px;
+    position:absolute;
+}
+
+ul.nav{
+    list-style: none;
+    display: inline-block;
+
+}
+ul.nav li{
+    display: inline-block;
+    position: relative;
+}
+
+ul.nav li li{
+    display: block;
+}
+
+ul.nav li > ul{
+    display : none;
+    position: absolute;
+}
+
+ul.nav li:hover > ul{
+    display: block;
+}
+
+div.nav .account{
+    /*display: inline-block;*/
+    float:right;
+}
+
+div.nav .account.desc{
+    display: none;
+}
