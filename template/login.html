@@ -2,29 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>DSS System - Login Page</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <div class="container login">
-    <fieldset class="fieldset login">
-        <legend>Login Form</legend>
+    <div class="text-note text-right margin-bottom-10">Welcome user, please verify yourself first</div>
+    <fieldset class="login">
+        <legend>Login Form - DSS System</legend>
         <form>
             <div class="form field">
-                <label>Username</label>:
-                <input type="text" name="uac_username" />
+                <label for="uac_username">Username</label>
+                <input id="uac_username" type="text" name="uac_username" />
             </div>
             <div class="form field">
-                <label>Password</label>:
-                <input type="password" name="uac_password" />
+                <label for="uac_password">Password</label>
+                <input id="uac_password" type="password" name="uac_password" />
             </div>
             <div class="form button">
-                <label></label>&nbsp;
                 <input type="submit" name="submit" value="Login" />
             </div>
         </form>
     </fieldset>
-
+    <div class="text-note text-center ">
+        DSS System Powered By PHP 5.6<br />
+        SDXPRODUCTION &reg; 2017
+    </div>
 </div>
 </body>
 </html>
