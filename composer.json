@@ -14,7 +14,7 @@
         "classmap": [],
         "psr-4"   : {
             "SimpleFw\\" : "src/System/",
-            "SimpleApp\\": "src/Apps/"
+            "SimpleApp\\": "src/App/"
         }
     },
     "require"          : {

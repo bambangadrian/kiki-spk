@@ -10,3 +10,8 @@
  * @version   GIT: $Id$
  * @link      -
  */
+namespace SimpleFw\Core;
+
+class Config{
+
+}
