@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<div class="container">
+    <div class="abs-block navigation clearfix">
+        <div class="block logo">DSS System</div>
+        <ul class="block nav">
+            <li>
+                <span>Master Data</span>
+                <ul>
+                    <li><a>Data Kriteria</a></li>
+                    <li><a>Fuzzy Setup</a>
+                        <ul>
+                            <li><a>Range Type</a></li>
+                            <li><a>Criteria - Fuzzy SAW</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Manage Society</a></li>
+                </ul>
+            </li>
+            <li>
+                <span>DSS Portal</span>
+                <ul>
+                    <li><a>Setup New Selection</a></li>
+                    <li><a>Participant</a>
+                        <ul>
+                            <li><a>Criteria Fields</a></li>
+                            <li><a>Field Map</a></li>
+                            <li><a>Society as Participant</a></li>
+                        </ul>
+                    </li>
+                    <li><a>DSS List</a></li>
+                    <li><a>Report</a></li>
+                </ul>
+            </li>
+            <li><span>User</span>
+                <ul>
+                    <li><a>Role</a></li>
+                    <li><a>User</a></li>
+                    <li><a>Privileges (User-Role)</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav float-right">
+            <li><span>Bambang Adrian S</span>
+                <ul class="right">
+                    <li><a>Profile</a></li>
+                    <li><a>Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="container main">
+    <div class="container">
+        <div class="block block-4">
+            <div class="panel">
+                <h1 class="panel title">Warga</h1>
+                <div class="panel header">
+                    <div class="panel message">
+                        <div class="error">
+                            This is error message
+                        </div>
+                        <div class="success">
+                            This is success message
+                        </div>
+                        <div class="info">
+                            This is info message
+                        </div>
+                    </div>
+                </div>
+                <div class="panel content">
+                    <div class="block block-12">
+                        <form>
+                            <div class="form field">
+                                <label for="criteria">Criteria</label>
+                                <select id="criteria" name="criteria">
+                                    <option value="jelek">Jelek</option>
+                                </select>
+                            </div>
+                            <div class="form field">
+                                <label for="container">Container</label>
+                                <input id="container" type="text" name="container" />
+                            </div>
+                            <div class="form field">
+                                <label for="index">Index</label>
+                                <input id="index" type="text" name="index" />
+                            </div>
+                            <div class="form button">
+                                <input type="submit" name="submit" value="Login" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
