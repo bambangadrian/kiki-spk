@@ -15,7 +15,7 @@ try {
     $requestHandler = new \SimpleFw\Core\Request();
     $sessionHandler = new \SimpleFw\Core\Session();
     $configHandler = new \SimpleFw\Core\Config();
-    $routeHandler = new \SimpleFw\Core\Router();\
+    $routeHandler = new \SimpleFw\Core\Router();
 
 
 } catch (\Exception $ex) {
