@@ -37,7 +37,6 @@ $record = pgFetchRows($strSql);
                     This is info message
                 </div>
             </div>
-
         </div>
         <div class="panel content">
             <div class="panel control">
