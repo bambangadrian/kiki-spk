@@ -10,22 +10,21 @@
  * @version   GIT: $Id$
  * @link      -
  */
-namespace SimpleApp\Apps\Spk;
 
-/**
- * Class Spk
- *
- * @package SimpleApp
- * @subpackage Apps\Spk
- */
-class Spk extends \SimpleFw\Core\Application {
+namespace SimpleApp\Apps\Spk\Models;
+
+abstract class AbstractListing extends \SimpleFw\Components\Mvc\Model
+{
 
     /**
-     * Spk constructor.
+     * @var \SimpleApp\Apps\Spk\Views\Listing $View
      */
-    public function __construct()
+    protected $View;
+
+    public function loadView()
     {
-        $this->setName('DSS App');
-        $this->setDirPath(\SimpleFw\Core\Helpers\General::getBasePath('src/Apps/Spk'));
+        $this->View = new \SimpleApp\Apps\Spk\Views\Listing();
     }
+
+    abstract public function getListingData();
 }

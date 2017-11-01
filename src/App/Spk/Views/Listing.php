@@ -10,16 +10,14 @@
  * @version   GIT: $Id$
  * @link      -
  */
-namespace SimpleFw\Core;
 
-/**
- * Class Url.
- *
- * @package    SimpleFw
- * @subpackage Core
- * @author     Bambang Adrian S <bambang.adrian@gmail.com>
- */
-class Url{
+namespace SimpleApp\Apps\Spk\Views;
 
+class Listing extends \SimpleFw\Components\Mvc\View
+{
 
+    public function __construct()
+    {
+        $this->setTemplate('');
+    }
 }
