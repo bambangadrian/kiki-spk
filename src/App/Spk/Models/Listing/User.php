@@ -11,20 +11,24 @@
  * @link      -
  */
 
-namespace SimpleFw\Components\Mvc;
+namespace SimpleApp\Apps\Spk\Models\Listing;
 
-class Model
+class User extends \SimpleApp\Apps\Spk\Models\AbstractListing
 {
 
-    private $EntityName;
-
-    public function getEntityName()
+    public function loadView()
     {
-        return $this->EntityName;
+        parent::loadView();
+        //$this->View->
     }
 
-    protected function setEntityName($entityName)
+    public function __construct()
     {
-        $this->EntityName = $entityName;
+        $this->setEntityName('user');
+    }
+
+    public function getListingData()
+    {
+        return [];
     }
 }

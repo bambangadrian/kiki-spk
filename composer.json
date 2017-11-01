@@ -11,6 +11,9 @@
     ],
     "minimum-stability": "stable",
     "autoload"         : {
+        "files"   : [
+            "src/Constant.php"
+        ],
         "classmap": [],
         "psr-4"   : {
             "SimpleFw\\" : "src/System/",

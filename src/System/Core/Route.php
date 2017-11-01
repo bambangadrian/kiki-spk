@@ -12,14 +12,17 @@
  */
 namespace SimpleFw\Core;
 
-/**
- * Class Url.
- *
- * @package    SimpleFw
- * @subpackage Core
- * @author     Bambang Adrian S <bambang.adrian@gmail.com>
- */
-class Url{
+class Route{
+
+    /**
+     * Request path property.
+     *
+     * @var
+     */
+    private $RequestPath;
 
 
+    public function doRoute(\SimpleFw\Core\Request $request){
+
+    }
 }

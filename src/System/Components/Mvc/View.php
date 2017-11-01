@@ -17,12 +17,24 @@ class View{
 
     private $Data;
 
+    private $Template;
+
+    private $Output;
+
 
     public function setData(){
 
     }
 
+    public function setTemplate(){
+
+    }
+
     public function render(){
+
+    }
+
+    public function attachData(array $data = []){
 
     }
 }

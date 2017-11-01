@@ -12,12 +12,9 @@
  */
 require_once __DIR__ . '/../System/Bootstrap.php';
 try {
-    $requestHandler = new \SimpleFw\Core\Request();
-    $sessionHandler = new \SimpleFw\Core\Session();
-    $configHandler = new \SimpleFw\Core\Config();
-    $routeHandler = new \SimpleFw\Core\Router();
-
-
+    \SimpleFw\Core\Session::start();
+    $route = new \SimpleFw\Core\Route();
+    $route->doRoute(new \SimpleFw\Core\Request());
 } catch (\Exception $ex) {
-    var_dump($ex->getTraceAsString());
+    echo $ex->getMessage();
 }
