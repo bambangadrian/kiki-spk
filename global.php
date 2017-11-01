@@ -11,7 +11,7 @@ doIncludes(
 setActiveDbConnection('dbConnection', getPgConnection(DB_NAME, DB_USER, DB_PWD, DB_SERVER, DB_PORT));
 function protectLoginPage()
 {
-    if ($_SESSION['is_login'] === true) {
+    if (array_key_exists('is_login', $_SESSION) === true) {
         header('Location: dashboard.php');
         exit();
     }
@@ -19,7 +19,7 @@ function protectLoginPage()
 
 function protectApplicationPage()
 {
-    if ($_SESSION['is_login'] === false) {
+    if (array_key_exists('is_login', $_SESSION) === false) {
         header('Location: index.php');
         exit();
     }
