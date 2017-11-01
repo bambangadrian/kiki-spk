@@ -14,8 +14,9 @@ protectApplicationPage();
 <?php include_once __DIR__ . '/menu.php'; ?>
 <div class="container main clearfix">
     <div class="panel">
-
+        <h1 class="panel title">
+            Welcome, <?php echo $_SESSION['username']; ?>
+        </h1>
     </div>
-</div>
 </body>
 </html>
