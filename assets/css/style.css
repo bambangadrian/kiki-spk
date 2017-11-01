@@ -1,0 +1,402 @@
+
+html {
+    font-size   : 12px;
+    font-family : Tahoma, Helvetica, Arial, serif;
+    color       : #222222;
+}
+
+* {
+    font-size  : 1em;
+    box-sizing : border-box;
+}
+
+body {
+    padding    : 0;
+    margin     : 0;
+    background : #fafafa;
+}
+
+fieldset {
+    margin-bottom : 1.5em;
+}
+
+form {
+    line-height : 1em;
+    padding     : 1em;
+}
+
+div.container {
+    padding : 0.2em;
+    margin  : 0.2em;
+}
+
+div.container:before, div.container:after {
+    content : "";
+    display : table;
+}
+
+div.container:after {
+    clear : both;
+}
+
+div.container.login {
+    max-width : 30em;
+    margin    : 10% auto;
+}
+
+fieldset.login {
+    border-style  : double;
+    border-radius : 1em;
+    border-width  : 0.5em;
+    border-right  : none;
+    border-left   : none;
+    border-right  : none;
+    border-left   : none;
+    border-color  : #aaaaaa;
+}
+
+fieldset.login legend {
+    font-weight : bold;
+    line-height : 2em;
+    padding     : 0.5em 2em;
+    margin      : auto;
+    font-size   : 1.2em;
+    color       : maroon;
+}
+
+div.form.field {
+    margin         : 0.5em 0.2em;
+    vertical-align : top;
+}
+
+div.form label {
+    display : inline-block;
+    width   : 10em;
+}
+
+div.form.button {
+    text-align : center;
+    margin-top : 1em;
+}
+
+div.navigation {
+    display       : block;
+    text-align    : left;
+    padding       : 0 1em;
+    background    : #f5f5f5;
+    border-bottom : 0.1em solid #cccccc;
+    top           : 0;
+    left          : 0;
+    width         : 100%;
+}
+
+div.navigation > div.logo {
+    vertical-align : middle;
+    line-height    : 2.4em;
+    color          : #cccccc;
+    background     : black;
+    padding        : 0 1em;
+    margin         : 0 1em;
+    border-right   : 0.5em solid maroon;
+    border-left    : 0.5em solid maroon;
+}
+
+ul.nav, ul.nav ul {
+    list-style : none;
+    padding    : 0;
+    margin     : 0;
+    background : #eeeeee;
+}
+
+ul.nav, ul.nav li {
+    float    : left;
+    display  : block;
+    position : relative;
+}
+
+ul.nav ul {
+    display : none;
+}
+
+ul.nav ul li {
+    border-left : 0.5em solid #dddddd;
+}
+
+ul.nav > li {
+    border-top   : 0.2em solid maroon;
+    background   : #eeeeee;
+    border-right : 0.1em solid #f8f8f8;
+    border-left  : 0.1em solid #f8f8f8;
+}
+
+ul.nav > li > span, ul.nav > li > a {
+    font-weight : 600;
+}
+
+ul.nav li span, ul.nav li a {
+    display         : block;
+    padding         : 0.5em 1em;
+    text-decoration : none;
+    white-space     : nowrap;
+    border-bottom   : 0.1em solid #e5e5e5;
+    min-width       : 5em;
+}
+
+ul.nav li span:hover, ul.nav li a:hover {
+    background : #e5e5e5;
+}
+
+ul.nav ul li:hover {
+    border-left : 0.5em solid #bbbbbb;
+}
+
+ul.nav li:hover > ul {
+    display  : block;
+    position : absolute;
+    border   : 0.1em solid #e0e0e0;
+}
+
+ul.nav li:hover li { float : none; }
+
+ul.nav li:hover a { }
+
+ul.nav li > ul ul {
+    left : 100%;
+    top  : 0.5em;
+}
+
+div.main {
+    margin      : 2em;
+    line-height : 1.5em;
+}
+
+div.main > .panel, div.main > .block > .panel, div.main > .container > .block > .panel {
+    border        : 1px solid #222222;
+    margin-bottom : 1em;
+    min-height    : 10em;
+}
+
+div.panel {
+    margin : 0.5em;
+}
+
+div.panel > .panel {
+    margin : 0.1em auto;
+}
+
+.title, .description, .message, .header, .content, .footer, .control {
+    padding : 0.5em 1em;
+}
+
+div.panel .title, div.panel .footer {
+    background : #222222;
+    color      : #eeeeee;
+}
+
+div.panel .title {
+    margin-top : 0;
+    font-size  : 1.2em;
+}
+
+div.panel .message, div.panel .control {
+    background : #eeeeee;
+    border     : 0.1em solid #dddddd;
+}
+
+div.panel .footer {
+    margin-bottom : 0;
+    font-size     : 0.9em;
+}
+
+div.panel .message {
+    font-weight : bold;
+}
+
+div.panel .buttons {
+    padding : 0.5em 0;
+}
+
+div.panel .content {
+    overflow-x : auto;
+    width      : 100%;
+}
+
+div.panel .content table {
+    width : 100%;
+}
+
+table {
+    margin  : 0;
+    padding : 0;
+}
+
+table thead {
+    background  : #222222;
+    font-weight : bold;
+    font-size   : 1.1em;
+    color       : #eeeeee;
+}
+
+table tbody {
+    background : #eeeeee;
+}
+
+tr td, tr th {
+    text-align    : left;
+    border-bottom : 0.1em solid #cccccc;
+    padding       : 0 0.5em 0 1em;
+}
+
+table tbody tr:nth-child(even) {
+    background : #dddddd;
+}
+
+table tbody tr:hover {
+    background : #cccccc;
+}
+
+a:hover {
+    text-decoration : underline;
+}
+
+/** all helpers. **/
+.error {
+    color : red !important;
+}
+
+.success {
+    color : green !important;
+}
+
+.info {
+    color : blue !important;;
+}
+
+.clearfix:before, .clearfix:after {
+    content : "";
+    display : table;
+}
+
+.clearfix:after {
+    clear : both;
+}
+
+.text-right {
+    text-align : right !important;
+}
+
+.text-center {
+    text-align : center !important;
+}
+
+.text-note {
+    font-size : 0.8em;
+    color     : #888888;
+}
+
+.margin-top-10 {
+    margin-top : 1em !important;
+}
+
+.margin-bottom-10 {
+    margin-bottom : 1em !important;
+}
+
+.block {
+    padding : 0.1em;
+    float   : left;
+    display : block;
+}
+
+.block-1 {
+    width : 8.33%;
+}
+
+.block-2 {
+    width : 16.67%;
+}
+
+.block-3 {
+    width : 25%;
+}
+
+.block-4 {
+    width : 33.33%;
+}
+
+.block-5 {
+    width : 41.67%;
+}
+
+.block-6 {
+    width : 50%;
+}
+
+.block-7 {
+    width : 58.33%;
+}
+
+.block-8 {
+    width : 66.67%;
+}
+
+.block-9 {
+    width : 75%;
+}
+
+.block-10 {
+    width : 83.33%;
+}
+
+.block-11 {
+    width : 91.67%;
+}
+
+.block-12 {
+    width : 100%;
+}
+
+.fixed-block {
+    position : fixed !important;
+}
+
+.bottom {
+    bottom : 0;
+}
+
+.left {
+    left : 0;
+}
+
+.right {
+    right : 0;
+}
+
+.top {
+    top : 0;
+}
+
+.abs-block {
+    position : absolute !important;
+}
+
+.float-right {
+    float : right !important;
+}
+
+.relative-block {
+    position : relative;
+}
+
+.float-left {
+    float : left !important;
+}
+
+.well {
+    padding    : 1em;
+    background : #eeeeee;
+}
+
+.full-width {
+    width : 100%;
+}
