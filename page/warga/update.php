@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../../global.php';
 protectApplicationPage();
+$data = include_once('data.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +14,7 @@ protectApplicationPage();
 <?php include_once __DIR__ . '/../../menu.php'; ?>
 <div class="container main">
     <div class="container">
-        <div class="block block-4">
+        <div class="block block-12">
             <div class="panel">
                 <h1 class="panel title">Warga</h1>
                 <div class="panel header">
@@ -43,57 +44,41 @@ protectApplicationPage();
                             <div class="form field">
                                 <label for="kondisi_rumah">Kondisi Rumah</label>
                                 <select id="kondisi_rumah" name="kondisi_rumah">
-                                    <option value="jelek">Jelek</option>
-                                    <option value="sedang">sedang</option>
-                                    <option value="mewah">Mewah</option>
-                                </select>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="block block-12">
-                        <form>
-                            <div class="form field">
-                                <label for="kondisi_rumah">Kondisi Rumah</label>
-                                <select id="kondisi_rumah" name="kondisi_rumah">
-                                    <option value="jelek">Jelek</option>
-                                    <option value="sedang">sedang</option>
-                                    <option value="mewah">Mewah</option>
+                                    <?php foreach ($data['kondisi_rumah'] as $row): ?>
+                                        <option value="<?php $row['id']; ?>"><?php echo $row['name']; ?></option>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="form field">
-                                <label for="penghasilan">Penghasilan</label>
+                                <label for="penghasilan">Kondisi Rumah</label>
                                 <select id="penghasilan" name="penghasilan">
-                                    <option value="jelek">Jelek</option>
-                                    <option value="sedang">sedang</option>
-                                    <option value="mewah">Mewah</option>
+                                    <?php foreach ($data['penghasilan'] as $row): ?>
+                                        <option value="<?php $row['id']; ?>"><?php echo $row['name']; ?></option>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="form field">
                                 <label for="pekerjaan">Pekerjaan</label>
                                 <select id="pekerjaan" name="pekerjaan">
-                                    <option value="jelek">Jelek</option>
-                                    <option value="sedang">sedang</option>
-                                    <option value="mewah">Mewah</option>
-                                </select>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="block block-12">
-                        <form>
-                            <div class="form field">
-                                <label for="jumlah_tanggungan">Jumlah Tanggungan</label>
-                                <select id="jumlah_tanggungan" name="jumlah_tanggungan">
-                                    <option value="jelek">Jelek</option>
-                                    <option value="sedang">sedang</option>
-                                    <option value="mewah">Mewah</option>
+                                    <?php foreach ($data['pekerjaan'] as $row): ?>
+                                        <option value="<?php $row['id']; ?>"><?php echo $row['name']; ?></option>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="form field">
-                                <label for="aset_pribasi">Aset Pribadi</label>
-                                <select id="aset_pribasi" name="aset_pribasi">
-                                    <option value="jelek">Jelek</option>
-                                    <option value="sedang">sedang</option>
-                                    <option value="mewah">Mewah</option>
+                                <label for="tanggungan">Jumlah Tanggungan</label>
+                                <select id="tanggungan" name="tanggungan">
+                                    <?php foreach ($data['tanggungan'] as $row): ?>
+                                        <option value="<?php $row['id']; ?>"><?php echo $row['name']; ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                            <div class="form field">
+                                <label for="aset">Aset Pribadi</label>
+                                <select id="aset" name="aset">
+                                    <?php foreach ($data['aset'] as $row): ?>
+                                        <option value="<?php $row['id']; ?>"><?php echo $row['name']; ?></option>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="form button">
