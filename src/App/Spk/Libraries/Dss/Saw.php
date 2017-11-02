@@ -11,13 +11,15 @@
  * @link      -
  */
 
-namespace SimpleApp\Spk\Views;
+namespace SimpleApp\Spk\Libraries\Dss;
 
-class Listing extends \SimpleFw\Components\Mvc\View
-{
+class Saw{
 
-    public function __construct()
-    {
-        $this->setTemplate('');
-    }
+    private $Indexing;
+
+    private $Participants;
+
+
+
+
 }

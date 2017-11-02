@@ -11,13 +11,12 @@
  * @link      -
  */
 
-namespace SimpleApp\Spk\Views;
+namespace SimpleApp\Spk\Libraries\Dss\Rules\Notations;
 
-class Listing extends \SimpleFw\Components\Mvc\View
-{
+class LessThan implements NotationInterface{
 
-    public function __construct()
+    public function compare($a, $b, \SimpleApp\Spk\Libraries\Dss\Rules\Types\TypeInterface $type)
     {
-        $this->setTemplate('');
+        return ($type->getValue($a) < $type->getValue($b));
     }
 }

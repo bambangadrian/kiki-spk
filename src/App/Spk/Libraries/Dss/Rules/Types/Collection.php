@@ -11,20 +11,12 @@
  * @link      -
  */
 
-namespace SimpleApp\Spk\Models;
+namespace SimpleApp\Spk\Libraries\Dss\Rules\Types;
 
-abstract class AbstractListing extends \SimpleFw\Components\Mvc\Model
-{
+class Collection implements TypeInterface {
 
-    /**
-     * @var \SimpleApp\Spk\Views\Listing $View
-     */
-    protected $View;
-
-    public function loadView()
+    public function getValue($param)
     {
-        $this->View = new \SimpleApp\Spk\Views\Listing();
+        return (array) $param;
     }
-
-    abstract public function getListingData();
 }

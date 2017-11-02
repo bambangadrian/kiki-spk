@@ -10,14 +10,9 @@
  * @version   GIT: $Id$
  * @link      -
  */
+namespace SimpleApp\Spk\Libraries\Dss;
 
-namespace SimpleApp\Spk\Views;
+class Participant{
 
-class Listing extends \SimpleFw\Components\Mvc\View
-{
 
-    public function __construct()
-    {
-        $this->setTemplate('');
-    }
 }

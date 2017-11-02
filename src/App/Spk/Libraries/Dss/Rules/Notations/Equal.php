@@ -11,20 +11,13 @@
  * @link      -
  */
 
-namespace SimpleApp\Spk\Models;
+namespace SimpleApp\Spk\Libraries\Dss\Rules\Notations;
 
-abstract class AbstractListing extends \SimpleFw\Components\Mvc\Model
+class Equal implements NotationInterface
 {
 
-    /**
-     * @var \SimpleApp\Spk\Views\Listing $View
-     */
-    protected $View;
-
-    public function loadView()
+    public function compare($a, $b, \SimpleApp\Spk\Libraries\Dss\Rules\Types\TypeInterface $type)
     {
-        $this->View = new \SimpleApp\Spk\Views\Listing();
+        return ($type->getValue($a) == $type->getValue($b));
     }
-
-    abstract public function getListingData();
 }
