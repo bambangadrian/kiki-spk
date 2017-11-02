@@ -8,8 +8,8 @@
                     <li><a href="<?php echo HOST; ?>/page/criteria">Data Kriteria</a></li>
                     <li><a>Fuzzy Setup</a>
                         <ul>
-                            <li><a href="<?php echo HOST; ?>/page/fuzzy_range">Range Type</a></li>
-                            <li><a href="<?php echo HOST; ?>/page/criteria_fuzzy">Criteria - Fuzzy SAW</a></li>
+                            <li><a href="<?php echo HOST; ?>/page/fuzzy/range_type">Range Type</a></li>
+                            <li><a href="<?php echo HOST; ?>/page/fuzzy/criteria_fuzzy">Criteria - Fuzzy SAW</a></li>
                         </ul>
                     </li>
                     <li><a href="<?php echo HOST; ?>/page/warga/">Manage Society</a></li>
