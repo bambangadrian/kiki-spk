@@ -11,9 +11,9 @@
  * @link      -
  */
 
-namespace SimpleApp\Apps\Spk\Models\Listing;
+namespace SimpleApp\Spk\Models\Listing;
 
-class User extends \SimpleApp\Apps\Spk\Models\AbstractListing
+class User extends \SimpleApp\Spk\Models\AbstractListing
 {
 
     public function loadView()

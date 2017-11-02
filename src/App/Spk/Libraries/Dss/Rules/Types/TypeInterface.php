@@ -11,13 +11,15 @@
  * @link      -
  */
 
-namespace SimpleApp\Spk\Views;
+namespace SimpleApp\Spk\Libraries\Dss\Rules\Types;
 
-class Listing extends \SimpleFw\Components\Mvc\View
+interface TypeInterface
 {
+    const NUMERIC    = 'numeric';
 
-    public function __construct()
-    {
-        $this->setTemplate('');
-    }
+    const STRING     = 'string';
+
+    const COLLECTION = 'array';
+
+    public function getValue($param);
 }

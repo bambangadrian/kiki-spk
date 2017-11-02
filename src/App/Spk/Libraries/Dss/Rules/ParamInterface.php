@@ -10,14 +10,9 @@
  * @version   GIT: $Id$
  * @link      -
  */
+namespace SimpleApp\Spk\Libraries\Dss\Rules;
 
-namespace SimpleApp\Spk\Views;
+interface ParamInterface{
 
-class Listing extends \SimpleFw\Components\Mvc\View
-{
-
-    public function __construct()
-    {
-        $this->setTemplate('');
-    }
+    public function getValue();
 }

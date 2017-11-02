@@ -10,7 +10,7 @@
  * @version   GIT: $Id$
  * @link      -
  */
-namespace SimpleApp\Apps\Spk;
+namespace SimpleApp\Spk;
 
 /**
  * Class Spk

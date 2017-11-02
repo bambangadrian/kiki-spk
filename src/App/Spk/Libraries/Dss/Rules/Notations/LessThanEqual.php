@@ -11,12 +11,13 @@
  * @link      -
  */
 
-namespace SimpleApp\Apps\Spk\Libraries;
+namespace SimpleApp\Spk\Libraries\Dss\Rules\Notations;
 
-class Dss{
+class LessThanEqual implements NotationInterface
+{
 
-
-
+    public function compare($a, $b, \SimpleApp\Spk\Libraries\Dss\Rules\Types\TypeInterface $type)
+    {
+        return ($type->getValue($a) <= $type->getValue($b));
+    }
 }
-
-

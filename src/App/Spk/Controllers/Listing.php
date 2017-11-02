@@ -11,19 +11,19 @@
  * @link      -
  */
 
-namespace SimpleApp\Apps\Spk\Controller;
+namespace SimpleApp\Spk\Controller;
 
 class Listing extends \SimpleFw\Components\Mvc\Controller
 {
 
     /**
-     * @var \SimpleApp\Apps\Spk\Models\AbstractListing $Model
+     * @var \SimpleApp\Spk\Models\AbstractListing $Model
      */
     protected $Model;
 
     protected function loadModel()
     {
-        $modelNameSpace = '\SimpleApp\Apps\Spk\Models\Listing';
+        $modelNameSpace = '\SimpleApp\Spk\Models\Listing';
         $this->Model = new $modelNameSpace . $this->getModelName();
 
     }
