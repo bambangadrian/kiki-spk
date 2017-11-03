@@ -41,8 +41,7 @@ $record = pgFetchRows($strSql);
         <div class="panel content">
             <div class="panel control">
                 <div class="buttons">
-                    <input type="button" value="Add" />
-                    <input type="button" value="Add" />
+                    <input type="button" value="Add" onclick="window.location.href='update.php'" />
                 </div>
             </div>
             <table>

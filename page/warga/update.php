@@ -32,7 +32,7 @@ $data = include_once('data.php');
                 </div>
                 <div class="panel content">
                     <div class="block block-12">
-                        <form>
+                        <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
                             <div class="form field">
                                 <label for="nama">Nama</label>
                                 <input id="nama" type="text" name="nama" />
@@ -82,7 +82,8 @@ $data = include_once('data.php');
                                 </select>
                             </div>
                             <div class="form button">
-                                <input type="submit" name="submit" value="Login" />
+                                <input type="submit" name="submit" value="Save" />
+                                <input type="reset" name="submit" value="reset" />
                             </div>
                         </form>
                     </div>
