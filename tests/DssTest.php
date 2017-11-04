@@ -10,9 +10,4 @@
  * @version   GIT: $Id$
  * @link      -
  */
-namespace SimpleApp\Spk\Libraries\Dss\Rules;
 
-interface ParamInterface{
-
-    public function getValue();
-}

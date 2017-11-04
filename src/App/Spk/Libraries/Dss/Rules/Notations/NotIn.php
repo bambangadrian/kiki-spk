@@ -11,16 +11,13 @@
  * @link      -
  */
 
-namespace SimpleApp\Spk\Libraries\Dss\Rules\Types;
+namespace SimpleApp\Spk\Libraries\Dss\Rules\Notations;
 
-class Numeric implements TypeInterface
+class NotIn implements NotationInterface
 {
 
-    public function getValue($param)
+    public function compare($a, $b, \SimpleApp\Spk\Libraries\Dss\Rules\Types\TypeInterface $type)
     {
-        if (is_numeric($param) === false) {
-            throw new \InvalidArgumentException($param . ' is not numeric type');
-        }
-        return $param;
+        return (in_array($a, $type->getValue($b), true) === false);
     }
 }

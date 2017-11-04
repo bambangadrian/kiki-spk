@@ -18,6 +18,6 @@ class Equal implements NotationInterface
 
     public function compare($a, $b, \SimpleApp\Spk\Libraries\Dss\Rules\Types\TypeInterface $type)
     {
-        return ($type->getValue($a) == $type->getValue($b));
+        return ($type->getValue($a) === $type->getValue($b));
     }
 }

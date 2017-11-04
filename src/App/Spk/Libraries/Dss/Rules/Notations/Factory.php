@@ -27,6 +27,8 @@ class Factory
             'lte' => __NAMESPACE__ . '\\LessThanEqual',
             'gt'  => __NAMESPACE__ . '\\GreaterThan',
             'gte' => __NAMESPACE__ . '\\GreaterThanEqual',
+            'neq' => __NAMESPACE__ . '\\NotEqual',
+            'nin' => __NAMESPACE__ . '\\NotIn'
         ];
     }
 

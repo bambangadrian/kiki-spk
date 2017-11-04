@@ -13,36 +13,101 @@
 
 namespace SimpleApp\Spk\Libraries\Dss;
 
-class Criteria implements \SimpleApp\Spk\Libraries\Dss\Rules\ParamInterface
+class Criteria
 {
 
-    private $Name;
+    const COST_TYPE    = 'cost';
 
-    private $Value;
+    const BENEFIT_TYPE = 'benefit';
+
+    private $Code;
+
+    private $FieldName;
+
+    private $Weight;
+
+    private $Type;
+
+    private $SubCriterias;
+
+    /**
+     * @var Fuzzy $FuzzyRule
+     */
+    private $FuzzyRule;
+
+    public function __construct($code, $fieldName, $type = self::BENEFIT_TYPE, $weight = 0)
+    {
+        $this->setCode($code);
+        $this->setFieldName($fieldName);
+        $this->setType($type);
+        $this->setWeight($weight);
+    }
+
+    public function buildRules(){
+
+    }
+
+    public function addSubCriteria(Criteria $criteria)
+    {
+        $this->SubCriterias[$criteria->getCode()] = $criteria;
+    }
+
+    public function getSubCriterias()
+    {
+        return $this->SubCriterias;
+    }
+
+    public function isParent()
+    {
+        return (count($this->getSubCriterias()) > 0);
+    }
 
     /**
      * @return string
      */
-    public function getName()
+    public function getFieldName()
     {
-        return $this->Name;
+        return $this->FieldName;
     }
 
     /**
      * @param string $name
      */
-    public function setName($name)
+    public function setFieldName($name)
     {
-        $this->Name = $name;
+        $this->FieldName = $name;
     }
 
-    public function setValue($value)
+    public function getCode()
     {
-        $this->Value = $value;
+        $this->getCode();
     }
 
-    public function getValue()
+    public function setCode($code)
     {
-        return $this->Value;
+        $this->Code = $code;
+    }
+
+    public function setWeight($weight)
+    {
+        $this->Weight = $weight;
+    }
+
+    public function getWeight()
+    {
+        return $this->Weight;
+    }
+
+    public function getType()
+    {
+        return $this->Type;
+    }
+
+    public function setType($type)
+    {
+        if (array_key_exists($type, [self::COST_TYPE, self::BENEFIT_TYPE]) === false) {
+            throw new \InvalidArgumentException($type . ' is invalid criteria type');
+        }
+        $this->Type = $type;
     }
 }
