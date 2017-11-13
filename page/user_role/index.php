@@ -16,7 +16,7 @@ $pageUrl = HOST . '/page/user_role/';
 <?php include_once __DIR__ . '/../../menu.php'; ?>
 <div class="container main clearfix">
     <div class="panel">
-        <h1 class="panel title">Test page</h1>
+        <h1 class="panel title">Peran User</h1>
         <div class="panel description">Page description container.</div>
         <div class="panel header">
         </div>
@@ -31,7 +31,7 @@ $pageUrl = HOST . '/page/user_role/';
                 <tr>
                     <th>No</th>
                     <th>User</th>
-                    <th>Role</th>
+                    <th>Peran</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -43,7 +43,6 @@ $pageUrl = HOST . '/page/user_role/';
                         <td><?php echo $row['usr_name']; ?></td>
                         <td>
                             <a href="<?php echo $pageUrl; ?>update.php?id=<?php echo $row['uar_id']; ?>">Edit</a>
-                            <a href="<?php echo $pageUrl; ?>index.php?action=delete&id=<?php echo $row['uar_id']; ?>">Delete</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

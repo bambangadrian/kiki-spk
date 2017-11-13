@@ -12,7 +12,7 @@ $uacId = '';
 if (array_key_exists('submit', $_POST) === true) {
     $uacId = getPostValue('uac_id');
     $uacUsername = getPostValue('uac_username');
-    $uacPassword = getPostValue('uac_password');
+    $uacPassword = md5(getPostValue('uac_password'));
     $criteria = ' and uac_password = ' . pgEscape($uacPassword);
     if ($id !== null) {
         $criteria .= ' and uac_id <>' . pgEscape($id);
@@ -61,7 +61,7 @@ if ($id !== null) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <title>User</title>
     <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
 <body>
@@ -70,7 +70,7 @@ if ($id !== null) {
     <div class="container">
         <div class="block block-12">
             <div class="panel">
-                <h1 class="panel title">Warga</h1>
+                <h1 class="panel title">Form User</h1>
                 <div class="panel header">
                     <?php displayMessage($messageError, 'error'); ?>
                     <?php displayMessage($messageSuccess, 'success'); ?>
@@ -96,7 +96,9 @@ if ($id !== null) {
                             </div>
                             <div class="form button">
                                 <input type="submit" name="submit" value="Save" />
-                                <input type="reset" name="submit" value="reset" />
+                                <input type="button"
+                                       value="Bact to Listing"
+                                       onclick="window.location.href='index.php'" />
                             </div>
                         </form>
                     </div>

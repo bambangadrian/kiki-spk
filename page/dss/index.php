@@ -1,22 +1,22 @@
 <?php
 require_once __DIR__ . '/../../global.php';
 protectApplicationPage();
-$record = pgFetchRows(getSqlUser());
-$pageUrl = HOST . '/page/user/';
+$recordDssMaster = pgFetchRows(getDssMaster());
+$pageUrl = HOST . '/page/dss/';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>User</title>
-    <link rel="stylesheet" href="<?php echo HOST; ?>/assets/css/style.css" />
+    <title>Dss Master</title>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
 <body>
 <?php include_once __DIR__ . '/../../menu.php'; ?>
 <div class="container main clearfix">
     <div class="panel">
-        <h1 class="panel title">Listing User</h1>
+        <h1 class="panel title">Listing DSS Master</h1>
         <div class="panel description">Page description container.</div>
         <div class="panel header">
         </div>
@@ -30,19 +30,23 @@ $pageUrl = HOST . '/page/user/';
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>Username</th>
-                    <th>Password</th>
+                    <th>Nama</th>
+                    <th>Tanggal Mulai Periode</th>
+                    <th>Tanggal Akhir Periode</th>
+                    <th>Maximal Seleksi</th>
                     <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($record as $row): ?>
+                <?php foreach ($recordDssMaster as $row): ?>
                     <tr>
-                        <td><?php echo $row['uac_id']; ?></td>
-                        <td><?php echo $row['uac_username']; ?></td>
-                        <td><?php echo $row['uac_password']; ?></td>
+                        <td><?php echo $row['dsm_id']; ?></td>
+                        <td><?php echo $row['dsm_name']; ?></td>
+                        <td><?php echo $row['dsm_start_period']; ?></td>
+                        <td><?php echo $row['dsm_end_period']; ?></td>
+                        <td><?php echo $row['dsm_max_selection']; ?></td>
                         <td>
-                            <a href="<?php echo $pageUrl; ?>update.php?id=<?php echo $row['uac_id']; ?>">Edit</a>
+                            <a href="<?php echo $pageUrl; ?>report.php?id=<?php echo $row['dsm_id']; ?>&max=<?php echo $row['dsm_max_selection']; ?>">Show</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

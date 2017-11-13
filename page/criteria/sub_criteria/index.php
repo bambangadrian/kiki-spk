@@ -1,42 +1,24 @@
 <?php
-require_once __DIR__ . '/../../global.php';
+require_once __DIR__ . '/../../../global.php';
 protectApplicationPage();
-$strSql = 'SELECT
-                crt.crt_code,
-                crt.crt_name,
-                crt.crt_parent_id,
-                crt.crt_range_type_id,
-                crt.crt_id
-            FROM
-                "public".criteria AS crt';
-$record = pgFetchRows($strSql);
+$recordCriteria = pgFetchRows(getSqlRelationCriteria());
+$pageUrl = HOST . '/page/criteria/sub_criteria/';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <title>Kriteria</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css" />
 </head>
 <body>
-<?php include_once __DIR__ . '/../../menu.php'; ?>
+<?php include_once __DIR__ . '/../../../menu.php'; ?>
 <div class="container main clearfix">
     <div class="panel">
-        <h1 class="panel title">Test page</h1>
+        <h1 class="panel title">Listing Kriteria</h1>
         <div class="panel description">Page description container.</div>
         <div class="panel header">
-            <div class="panel message">
-                <div class="error">
-                    This is error message
-                </div>
-                <div class="success">
-                    This is success message
-                </div>
-                <div class="info">
-                    This is info message
-                </div>
-            </div>
         </div>
         <div class="panel content">
             <div class="panel control">
@@ -49,21 +31,23 @@ $record = pgFetchRows($strSql);
                 <tr>
                     <th>No</th>
                     <th>Code</th>
-                    <th>Name</th>
+                    <th>Nama</th>
                     <th>Parent</th>
-                    <th>Range Type</th>
-                    <th>is Parent</th>
+                    <th>Bobot</th>
                     <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($record as $row): ?>
+                <?php foreach ($recordCriteria as $row): ?>
                     <tr>
+                        <td><?php echo $row['crt_id']; ?></td>
                         <td><?php echo $row['crt_code']; ?></td>
                         <td><?php echo $row['crt_name']; ?></td>
-                        <td><?php echo $row['crt_parent_id']; ?></td>
-                        <td><?php echo $row['crt_range_type_id']; ?></td>
-                        <td></td>
+                        <td><?php echo $row['crm_name']; ?></td>
+                        <td><?php echo $row['rgt_name']; ?></td>
+                        <td>
+                            <a href="<?php echo $pageUrl; ?>update.php?id=<?php echo $row['crt_id']; ?>">Edit</a>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
                 </tbody>

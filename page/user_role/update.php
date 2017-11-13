@@ -63,7 +63,7 @@ if ($id !== null) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <title>Peran User</title>
     <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
 <body>
@@ -72,7 +72,7 @@ if ($id !== null) {
     <div class="container">
         <div class="block block-12">
             <div class="panel">
-                <h1 class="panel title">Warga</h1>
+                <h1 class="panel title">Form Peran User</h1>
                 <div class="panel header">
                     <?php displayMessage($messageError, 'error'); ?>
                     <?php displayMessage($messageSuccess, 'success'); ?>
@@ -114,7 +114,9 @@ if ($id !== null) {
                             </div>
                             <div class="form button">
                                 <input type="submit" name="submit" value="Save" />
-                                <input type="reset" name="submit" value="reset" />
+                                <input type="button"
+                                       value="Bact to Listing"
+                                       onclick="window.location.href='index.php'" />
                             </div>
                         </form>
                     </div>

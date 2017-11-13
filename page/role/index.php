@@ -9,14 +9,14 @@ $pageUrl = HOST . '/page/role/';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <title>Peran</title>
     <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
 <body>
 <?php include_once __DIR__ . '/../../menu.php'; ?>
 <div class="container main clearfix">
     <div class="panel">
-        <h1 class="panel title">Test page</h1>
+        <h1 class="panel title">Listing Peran</h1>
         <div class="panel description">Page description container.</div>
         <div class="panel header">
         </div>
@@ -43,7 +43,6 @@ $pageUrl = HOST . '/page/role/';
                         <td><?php echo $row['usr_name']; ?></td>
                         <td>
                             <a href="<?php echo $pageUrl; ?>update.php?id=<?php echo $row['usr_id']; ?>">Edit</a>
-                            <a href="<?php echo $pageUrl; ?>index.php?action=delete&id=<?php echo $row['usr_id']; ?>">Delete</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

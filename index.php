@@ -17,7 +17,7 @@ if (array_key_exists('submit', $_POST) === true) {
                 GROUP BY
                     usr.uac_id';
         $record = pgFetchRow($strSql);
-        if ($record !== []) {
+        if ($record !== false) {
             $_SESSION['is_login'] = true;
             $_SESSION['username'] = $record['uac_username'];
             header('Location: dashboard.php');

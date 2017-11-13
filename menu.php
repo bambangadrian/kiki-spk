@@ -5,29 +5,29 @@
             <li>
                 <span>Master Data</span>
                 <ul>
-                    <li><a href="<?php echo HOST; ?>/page/criteria">Data Kriteria</a></li>
-                    <li><a>Fuzzy Setup</a>
-                        <ul>
-                            <li><a href="<?php echo HOST; ?>/page/fuzzy/range_type">Range Type</a></li>
-                            <li><a href="<?php echo HOST; ?>/page/fuzzy/criteria_fuzzy">Criteria - Fuzzy SAW</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="<?php echo HOST; ?>/page/warga/">Manage Society</a></li>
+                    <!--<li><a>Data Criteria</a>-->
+                    <li><a href="<?php echo HOST; ?>/page/criteria/sub_criteria">Kriteria</a></li>
+                    <!--<ul>-->
+                    <!--    <li><a href="-->
+                    <?php //echo HOST; ?><!--/page/criteria/criteria">Primary Kriteria</a></li>-->
+                    <!--    <li><a href="-->
+                    <?php //echo HOST; ?><!--/page/criteria/sub_criteria">Sub Kriteria</a></li>-->
+                    <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li><a>Fuzzy Setup</a>-->
+                    <!--<ul>-->
+                    <li><a href="<?php echo HOST; ?>/page/fuzzy/range_type">Bobot</a></li>
+                    <!--<li><a href="-->
+                    <?php //echo HOST; ?><!--/page/fuzzy/criteria_fuzzy">Criteria - Fuzzy SAW</a></li>-->
+                    <!--</ul>-->
+                    <!--</li>-->
+                    <li><a href="<?php echo HOST; ?>/page/warga/">Data Warga</a></li>
                 </ul>
             </li>
             <li>
                 <span>DSS Portal</span>
                 <ul>
-                    <li><a>Setup New Selection</a></li>
-                    <li><a>Participant</a>
-                        <ul>
-                            <li><a>Criteria Fields</a></li>
-                            <li><a>Field Map</a></li>
-                            <li><a>Society as Participant</a></li>
-                        </ul>
-                    </li>
-                    <li><a>DSS List</a></li>
-                    <li><a>Report</a></li>
+                    <li><a href="<?php echo HOST; ?>/page/dss">Dss Seleksi</a></li>
                 </ul>
             </li>
             <li><span>User</span>
